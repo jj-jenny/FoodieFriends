@@ -5,6 +5,10 @@ Team Members: Jenny Jian Jie, Nicole Goh Wanyu
 
 Achievement Level: Gemini
 
+# Milestone 1 (Ideation)
+
+// To include problem motivation, proposed core features / user stories, design and plan
+
 ## Motivation 
 
 Have you ever had trouble deciding on what to eat? Or simply just want to try new food but don’t know where? Or face difficulty splitting bills paid by multiple people? 
@@ -15,9 +19,19 @@ Many people have experienced spending hours deciding on where to eat, walking ar
 
 We aim to make it easy for users to find suitable places to have their meals, especially with friends or in a large group via applications that they already use daily (eg Telegram). We also have a split bill function for shared meals to make it easy for groups to sort their expenses.
 
-# Milestone 1 (Ideation)
+## User Stories
 
-// To include problem motivation, proposed core features / user stories, design and plan
+1. As someone who first visits a mall/location, I want to be able to easily access a list of food options available in the area that suits my taste and preferences.
+
+2. As someone who is looking to try new food, I want to be able to receive suggestions on what to eat in the area.
+
+3. As someone who meets in a group, I want to be able to easily split multiple shared bills and know how much I should pay/receive. 
+
+## Core Features
+
+- Generate food recommendations based on location and food preferences.
+- Split bills among groups.
+
 
 # Milestone 2 (Prototype)
 
