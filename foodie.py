@@ -1,6 +1,7 @@
 import telebot
 from telebot import types
 
+
 bot = telebot.TeleBot("1754559930:AAGk8J4IbywhOE-RfH8UVN-fWXl9I-zKJ7E")
 user = bot.get_me()
 
@@ -37,7 +38,10 @@ def get_postalcd(message):
 @bot.message_handler(func=lambda message: message.text.isdigit() and len(message.text) == 6)
 def food_near_pc(message):
         chat_id = message.chat.id
-        bot.send_message(chat_id, "List of restaurants near " + message.text)
+        bot.send_message(chat_id, 'Here are some yummy food choices near ' + message.text + '! \U0001F609'
+                         '\n\n<b>928 Yishun Laksa</b>'
+                         '\n928 Yishun Central 1, #01-155, Singapore 760928'
+                         '\n\nto be updated', parse_mode = 'HTML')
         ##TODO
 
 
@@ -58,7 +62,10 @@ def get_region(message):
 def get_north(message):
         ## TODO
         chat_id = message.chat.id
-        bot.send_message(chat_id, 'List of food recommendations located in the North (to be updated)')
+        bot.send_message(chat_id, 'Here are some yummy food choices nearby! \U0001F609'
+                         '\n\n<b>928 Yishun Laksa</b>'
+                         '\n928 Yishun Central 1, #01-155, Singapore 760928'
+                         '\n\nto be updated', parse_mode = 'HTML')
 
 @bot.message_handler(func=lambda message: message.text == 'South')
 def get_south(message):
