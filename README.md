@@ -32,6 +32,7 @@ We aim to make it easy for users to find suitable places to have their meals, es
 - Generate food recommendations based on location and food preferences.
 - Split bills among groups.
 
+![Program Flow](https://user-images.githubusercontent.com/78203310/119811681-f296f880-bf19-11eb-9a05-f2b121839642.jpg)
 
 # Milestone 2 (Prototype)
 
