@@ -1,8 +1,9 @@
 import telebot
+import telegram
 from telebot import types
 
 
-bot = telebot.TeleBot("TOKEN")
+bot = telebot.TeleBot("1754559930:AAGk8J4IbywhOE-RfH8UVN-fWXl9I-zKJ7E")
 user = bot.get_me()
 
 @bot.message_handler(commands=['start'])
@@ -18,6 +19,7 @@ def send_welcome(message):
 	
 
 @bot.message_handler(func=lambda message: message.text == 'Food recommendation \U0001F924')
+@bot.message_handler(commands=['back'])
 def get_recommendation(message):
         chat_id = message.chat.id
         options = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
@@ -48,13 +50,15 @@ def food_near_pc(message):
 @bot.message_handler(func=lambda message: message.text == 'Region')
 def get_region(message):
         chat_id = message.chat.id
-        markup_food = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        markup_food = types.ReplyKeyboardMarkup(resize_keyboard=True)
         north = types.KeyboardButton('North')
         south = types.KeyboardButton('South')
         east = types.KeyboardButton('East')
         west = types.KeyboardButton('West')
-        
-        markup_food.row(north, south, east, west)
+        central = types.KeyboardButton('Central')
+        back = types.KeyboardButton('/back')
+        markup_food.row(north, south, east)
+        markup_food.row(west, central, back)
         bot.send_message(chat_id, "Where are you now? \U0001F914", reply_markup = markup_food)
 
 
@@ -62,28 +66,51 @@ def get_region(message):
 def get_north(message):
         ## TODO
         chat_id = message.chat.id
-        bot.send_message(chat_id, 'Here are some yummy food choices nearby! \U0001F609'
-                         '\n\n<b>928 Yishun Laksa</b>'
-                         '\n928 Yishun Central 1, #01-155, Singapore 760928'
+        file = open('north.txt')
+        north_food = file.read()
+        bot.send_message(chat_id, 'Here are some yummy food choices in the North! \U0001F609'
+                         + north_food +
                          '\n\nto be updated', parse_mode = 'HTML')
 
 @bot.message_handler(func=lambda message: message.text == 'South')
 def get_south(message):
         ## TODO
         chat_id = message.chat.id
-        bot.send_message(chat_id, 'List of food recommendations located in the South (to be updated)')
+        file = open('south.txt')
+        south_food = file.read()
+        bot.send_message(chat_id, 'Here are some yummy food choices in the South! \U0001F609'
+                         + south_food +
+                         '\n\nto be updated', parse_mode = 'HTML')
 
 @bot.message_handler(func=lambda message: message.text == 'East')
 def get_east(message):
         ## TODO
         chat_id = message.chat.id
-        bot.send_message(chat_id, 'List of food recommendations located in the East (to be updated)')
+        file = open('east.txt')
+        east_food = file.read()
+        bot.send_message(chat_id, 'Here are some yummy food choices in the East! \U0001F609'
+                         + east_food +
+                         '\n\nto be updated', parse_mode = 'HTML')
 
 @bot.message_handler(func=lambda message: message.text == 'West')
 def get_west(message):
         ## TODO
         chat_id = message.chat.id
-        bot.send_message(chat_id, 'List of food recommendations located in the West (to be updated)')
+        file = open('west.txt')
+        west_food = file.read()
+        bot.send_message(chat_id, 'Here are some yummy food choices in the West! \U0001F609'
+                         + west_food +
+                         '\n\nto be updated', parse_mode = 'HTML')
+
+@bot.message_handler(func=lambda message: message.text == 'Central')
+def get_central(message):
+        ## TODO
+        chat_id = message.chat.id
+        file = open('central.txt')
+        central_food = file.read()
+        bot.send_message(chat_id, 'Here are some yummy food choices in Central! \U0001F609'
+                         + central_food +
+                         '\n\nto be updated', parse_mode = 'HTML')
         
 
 @bot.message_handler(commands=['splitBill'])
