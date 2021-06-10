@@ -8,9 +8,9 @@ import telegram
 from telegram import Update, ForceReply, Message
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-TOKEN = "1754559930:AAGk8J4IbywhOE-RfH8UVN-fWXl9I-zKJ7E"
+TOKEN = "insert token here"
 
-bot = telebot.TeleBot("1754559930:AAGk8J4IbywhOE-RfH8UVN-fWXl9I-zKJ7E")
+bot = telebot.TeleBot("insert token here")
 user = bot.get_me()
 
 # Enable logging
