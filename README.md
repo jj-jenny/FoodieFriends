@@ -38,6 +38,12 @@ We aim to make it easy for users to find suitable places to have their meals, es
 
 // To include core features developed, problems encountered
 
+## Updates
+
+1. Hosting of Telegram Bot on Heroku
+
+## Problems Encountered
+
 # Milestone 3 (Extension)
 
 // To include bugs squashed, edge features developed, problems encountered, and user testing
