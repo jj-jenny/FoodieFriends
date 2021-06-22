@@ -54,7 +54,7 @@ def food_near_pc(update, context):
         ##TODO
 
 def get_region(update, context):
-    options = [['North', 'South', 'East'], ['West', 'Central', '/back']]
+    options = [['North', 'Northeast', 'East'], ['West', 'Central', '/back']]
     update.message.reply_text("Where are you now? \U0001F914", reply_markup = telegram.ReplyKeyboardMarkup(options, resize_keyboard = True))
 
 
@@ -79,11 +79,9 @@ def get_central(update, context):
     update.message.reply_text('List of food recommendations located in Central (to be updated)')
 
 def split_bills(update, context):
-    update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")
-        
-        ##TODO        
+    update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")       
 
-# Calc Bill
+# Calculate Bill
 def calculate(update: Update, _: CallbackContext) -> None:
     """Splits the bill"""
     all_words = update.message.text.split(" ")
@@ -127,9 +125,6 @@ def calculate(update: Update, _: CallbackContext) -> None:
             
     #return response
     update.message.reply_text(f"{to_pay}")
-
-
-#bot.polling()
 
 def main() -> None:
     """Start the bot."""
