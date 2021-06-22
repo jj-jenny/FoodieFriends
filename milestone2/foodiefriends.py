@@ -64,28 +64,25 @@ def get_region(update, context):
         
 
 
-@bot.message_handler(func=lambda message: message.text == 'North')
 def get_north(update, context):
         ## TODO
-   update.message.reply_text(chat_id, 'Here are some yummy food choices nearby! \U0001F609'
-                         '\n\n<b>928 Yishun Laksa</b>'
-                         '\n928 Yishun Central 1, #01-155, Singapore 760928'
-                         '\n\nto be updated', parse_mode = 'HTML')
+   update.message.reply_text('List of food recommendations located in the North (to be updated)')
 
-@bot.message_handler(func=lambda message: message.text == 'South')
 def get_south(update, context):
         ## TODO
-    update.message.reply_text(chat_id, 'List of food recommendations located in the South (to be updated)')
+    update.message.reply_text('List of food recommendations located in the South (to be updated)')
 
-@bot.message_handler(func=lambda message: message.text == 'East')
 def get_east(update, context):
         ## TODO
     update.message.reply_text(chat_id, 'List of food recommendations located in the East (to be updated)')
 
-@bot.message_handler(func=lambda message: message.text == 'West')
 def get_west(update, context):
         ## TODO
     update.message.reply_text(chat_id, 'List of food recommendations located in the West (to be updated)')
+
+def get_central(update, context):
+        ## TODO
+    update.message.reply_text(chat_id, 'List of food recommendations located in Central (to be updated)')
         
 
 @bot.message_handler(commands=['splitBill'])
@@ -111,6 +108,11 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.regex('Split my bills \U0001F4B8'), split_bills))
     dispatcher.add_handler(MessageHandler(Filters.regex('Postal Code'), get_postalcd))
     dispatcher.add_handler(MessageHandler(Filters.regex('Region'), get_region))
+    dispatcher.add_handler(MessageHandler(Filters.regex('North'), get_north))
+    dispatcher.add_handler(MessageHandler(Filters.regex('South'), get_south))
+    dispatcher.add_handler(MessageHandler(Filters.regex('West'), get_west))
+    dispatcher.add_handler(MessageHandler(Filters.regex('East'), get_east))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Central'), get_central))
                     
     # Start the Bot
     updater.start_polling()
