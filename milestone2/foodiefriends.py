@@ -10,9 +10,9 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 
 import decimal
 
-TOKEN = "token"
+TOKEN = 'token'
 
-bot = telebot.TeleBot("token")
+bot = telebot.TeleBot(TOKEN)
 user = bot.get_me()
 
 # Enable logging
@@ -60,26 +60,30 @@ def get_region(update, context):
 
 def get_north(update, context):
         ## TODO
-   update.message.reply_text('List of food recommendations located in the North (to be updated)')
+    update.message.reply_text('List of food recommendations located in the North (to be updated)')
 
-def get_south(update, context):
+def get_northeast(update, context):
         ## TODO
-    update.message.reply_text(chat_id, 'List of food recommendations located in the South (to be updated)')
+    update.message.reply_text('List of food recommendations located in the Northeast (to be updated)')
 
 def get_east(update, context):
         ## TODO
-    update.message.reply_text(chat_id, 'List of food recommendations located in the East (to be updated)')
+    update.message.reply_text('List of food recommendations located in the East (to be updated)')
 
 def get_west(update, context):
         ## TODO
-    update.message.reply_text(chat_id, 'List of food recommendations located in the West (to be updated)')
+    update.message.reply_text('List of food recommendations located in the West (to be updated)')
+
+def get_central(update, context):
+        ## TODO
+    update.message.reply_text('List of food recommendations located in Central (to be updated)')
 
 def split_bills(update, context):
     update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")
         
         ##TODO        
 
-# Calculate Bill
+# Calc Bill
 def calculate(update: Update, _: CallbackContext) -> None:
     """Splits the bill"""
     all_words = update.message.text.split(" ")
@@ -145,6 +149,11 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.regex('Split my bills \U0001F4B8'), split_bills))
     dispatcher.add_handler(MessageHandler(Filters.regex('Postal Code'), get_postalcd))
     dispatcher.add_handler(MessageHandler(Filters.regex('Region'), get_region))
+    dispatcher.add_handler(MessageHandler(Filters.regex('North'), get_north))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Northeast'), get_northeast))
+    dispatcher.add_handler(MessageHandler(Filters.regex('East'), get_east))
+    dispatcher.add_handler(MessageHandler(Filters.regex('West'), get_west))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Central'), get_central))
                     
     # Start the Bot
     updater.start_polling()
