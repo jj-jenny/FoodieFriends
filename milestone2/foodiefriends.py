@@ -50,7 +50,6 @@ def split_bills(update, context):
 def get_postalcd(update, context):
     update.message.reply_text("Enter your postal code below! \U0001F60B")
 
-@bot.message_handler(func=lambda message: message.text.isdigit() and len(message.text) == 6)
 def food_near_pc(update, context):
     update.message.reply_text(chat_id, 'Here are some yummy food choices near ' + message.text + '! \U0001F609'
                          '\n\n<b>928 Yishun Laksa</b>'
@@ -62,7 +61,6 @@ def get_region(update, context):
     options = [['North', 'South', 'East'], ['West', 'Central', '/back']]
     update.message.reply_text("Where are you now? \U0001F914", reply_markup = telegram.ReplyKeyboardMarkup(options, resize_keyboard = True))
         
-
 
 def get_north(update, context):
         ## TODO
@@ -85,7 +83,6 @@ def get_central(update, context):
     update.message.reply_text(chat_id, 'List of food recommendations located in Central (to be updated)')
         
 
-@bot.message_handler(commands=['splitBill'])
 def split_bill(update, context):
     update.message.reply_text("How many people are splitting the bill?")
 
