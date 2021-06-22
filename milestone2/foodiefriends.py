@@ -8,9 +8,9 @@ import telegram
 from telegram import Update, ForceReply, Message
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-TOKEN = "insert token here"
+TOKEN = "token"
 
-bot = telebot.TeleBot("insert token here")
+bot = telebot.TeleBot("token")
 user = bot.get_me()
 
 # Enable logging
@@ -28,12 +28,18 @@ def start(update, context):
     update.message.reply_text("Hello, what would you like to do today?", reply_markup = telegram.ReplyKeyboardMarkup(reply_keyboard,
                                                                                                                      resize_keyboard = True,
                                                                                                                      one_time_keyboard = True))
-      
+
+def back(update, context):
+    options = [['Region', 'Postal Code']]
+    update.message.reply_text("Please select your region or enter your postal code.", reply_markup = telegram.ReplyKeyboardMarkup(options,
+                                                                                                                                  resize_keyboard = True,
+                                                                                                                                one_time_keyboard = True))
+
 def get_recommendation(update, context):
     options = [['Region', 'Postal Code']]
     update.message.reply_text("Please select your region or enter your postal code.", reply_markup = telegram.ReplyKeyboardMarkup(options,
                                                                                                                                   resize_keyboard = True,
-                                                                                                                                  one_time_keyboard = True))
+                                                                                                                                one_time_keyboard = True))
 
 
 def split_bills(update, context):
@@ -98,7 +104,7 @@ def main() -> None:
 
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(CommandHandler("back", start))
+    dispatcher.add_handler(CommandHandler("back", back))
 
     # on non command i.e message - echo the message on Telegram
     dispatcher.add_handler(MessageHandler(Filters.regex('Food recommendation \U0001F924'), get_recommendation))
