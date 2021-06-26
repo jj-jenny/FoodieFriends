@@ -41,6 +41,7 @@ We aim to make it easy for users to find suitable places to have their meals, es
 ## Updates
 
 1. Hosting of Telegram Bot on Heroku
+2. Addition of calculate bill function to our split bills command
 
 ## Problems Encountered
 
