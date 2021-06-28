@@ -1,5 +1,4 @@
 
-
 <b>The Punggol Settlement</b>
 500 New Punggol Road, Singapore 828617
 <a href="https://goo.gl/maps/psSGG4h8YHVGVDM76">Opening Hours</a>
@@ -7,3 +6,15 @@
 <b>Eleven Strands</b>
 66 Yio Chu Kang Rd, Singapore 545568
 <a href="https://goo.gl/maps/ZWi22vbSsmptr1DU9">Opening Hours</a>
+
+<b>Ah Seng Braised Duck Rice</b>
+49A Serangoon Garden Way, #01-44, Serangoon Garden Market,  Singapore 555945
+<a href="https://goo.gl/maps/ZDk44f8qThySY81Y6">Opening Hours</a>
+
+<b>Finest Song Kee Fishball Noodles</b>
+532 Upper Serangoon Rd, Singapore 534547
+<a href="https://g.page/songkee?share">Opening Hours</a>
+
+<b>Yi Dian Xin Hong Kong Dim Sum</b>
+1012 Upper Serangoon Rd, Singapore 534750
+<a href="https://goo.gl/maps/pePp2zk4mqjaTZie8">Opening Hours</a>
