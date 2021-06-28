@@ -38,7 +38,7 @@ def back(update, context):
                                                                                                                                 one_time_keyboard = True))
 
 def get_recommendation(update, context):
-    options = [['Region', 'Postal Code']]
+    options = [['Region', 'Postal Code (to be updated)']]
     update.message.reply_text("Please select your region or enter your postal code.", reply_markup = telegram.ReplyKeyboardMarkup(options,
                                                                                                                                   resize_keyboard = True,
                                                                                                                                 one_time_keyboard = True))
@@ -47,36 +47,38 @@ def get_postalcd(update, context):
     update.message.reply_text("Enter your postal code below! \U0001F60B")
 
 def food_near_pc(update, context):
-    update.message.reply_text(chat_id, 'Here are some yummy food choices near ' + message.text + '! \U0001F609'
-                         '\n\n<b>928 Yishun Laksa</b>'
-                         '\n928 Yishun Central 1, #01-155, Singapore 760928'
-                         '\n\nto be updated', parse_mode = 'HTML')
+    update.message.reply_text('to be updated')
         ##TODO
 
 def get_region(update, context):
-    options = [['North', 'Northeast', 'East'], ['West', 'Central', '/back']]
+    options = [['1. North', '2. Northeast', '3. East'], ['4. West', '5. Central', '/back']]
     update.message.reply_text("Where are you now? \U0001F914", reply_markup = telegram.ReplyKeyboardMarkup(options, resize_keyboard = True))
 
 
 def get_north(update, context):
-        ## TODO
-    update.message.reply_text('List of food recommendations located in the North (to be updated)')
+    file = open('north.txt')
+    north_food = file.read()
+    update.message.reply_text('List of food recommendations located in the North (to be updated)' + north_food, parse_mode = 'HTML')
 
 def get_northeast(update, context):
-        ## TODO
-    update.message.reply_text('List of food recommendations located in the Northeast (to be updated)')
+    file = open('northeast.txt')
+    northeast_food = file.read()
+    update.message.reply_text('List of food recommendations located in the Northeast (to be updated)' + northeast_food, parse_mode = 'HTML')
 
 def get_east(update, context):
-        ## TODO
-    update.message.reply_text('List of food recommendations located in the East (to be updated)')
+    file = open('east.txt')
+    east_food = file.read()
+    update.message.reply_text('List of food recommendations located in the East (to be updated)' + east_food, parse_mode = 'HTML')
 
 def get_west(update, context):
-        ## TODO
-    update.message.reply_text('List of food recommendations located in the West (to be updated)')
+    file = open('west.txt')
+    west_food = file.read()
+    update.message.reply_text('List of food recommendations located in the West (to be updated)' + west_food, parse_mode = 'HTML')
 
 def get_central(update, context):
-        ## TODO
-    update.message.reply_text('List of food recommendations located in Central (to be updated)')
+    file = open('central.txt')
+    central_food = file.read()
+    update.message.reply_text('List of food recommendations located in Central (to be updated)' + central_food, parse_mode = 'HTML')
 
 def split_bills(update, context):
     update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")       
@@ -144,11 +146,11 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.regex('Split my bills \U0001F4B8'), split_bills))
     dispatcher.add_handler(MessageHandler(Filters.regex('Postal Code'), get_postalcd))
     dispatcher.add_handler(MessageHandler(Filters.regex('Region'), get_region))
-    dispatcher.add_handler(MessageHandler(Filters.regex('North'), get_north))
-    dispatcher.add_handler(MessageHandler(Filters.regex('Northeast'), get_northeast))
-    dispatcher.add_handler(MessageHandler(Filters.regex('East'), get_east))
-    dispatcher.add_handler(MessageHandler(Filters.regex('West'), get_west))
-    dispatcher.add_handler(MessageHandler(Filters.regex('Central'), get_central))
+    dispatcher.add_handler(MessageHandler(Filters.regex('1. North'), get_north))
+    dispatcher.add_handler(MessageHandler(Filters.regex('2. Northeast'), get_northeast))
+    dispatcher.add_handler(MessageHandler(Filters.regex('3. East'), get_east))
+    dispatcher.add_handler(MessageHandler(Filters.regex('4. West'), get_west))
+    dispatcher.add_handler(MessageHandler(Filters.regex('5. Central'), get_central))
                     
     # Start the Bot
     updater.start_polling()
@@ -166,3 +168,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
