@@ -9,8 +9,9 @@ from telegram import Update, ForceReply, Message
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 import decimal
+import random
 
-TOKEN = 'token'
+TOKEN = 'TOKEN'
 
 bot = telebot.TeleBot(TOKEN)
 user = bot.get_me()
@@ -54,31 +55,41 @@ def get_region(update, context):
     options = [['1. North', '2. Northeast', '3. East'], ['4. West', '5. Central', '/back']]
     update.message.reply_text("Where are you now? \U0001F914", reply_markup = telegram.ReplyKeyboardMarkup(options, resize_keyboard = True))
 
+def random_shuffle(fname):
+    lines=open(fname).read()
+    paragraphs = lines.split('\n\n')
+    random.shuffle(paragraphs)
+    i = 0
+    output = ""
+    while i < 3:
+        output = output + paragraphs[i] + "\n\n"
+        i = i + 1
+    return output
 
 def get_north(update, context):
-    file = open('north.txt')
-    north_food = file.read()
-    update.message.reply_text('List of food recommendations located in the North (to be updated)' + north_food, parse_mode = 'HTML')
+    #file = open('north.txt')
+    north_food = random_shuffle('north.txt')
+    update.message.reply_text('List of food recommendations located in the North \n\n' + north_food, parse_mode = 'HTML')
 
 def get_northeast(update, context):
-    file = open('northeast.txt')
-    northeast_food = file.read()
-    update.message.reply_text('List of food recommendations located in the Northeast (to be updated)' + northeast_food, parse_mode = 'HTML')
+    #file = open('northeast.txt')
+    northeast_food = random_shuffle('northeast.txt')
+    update.message.reply_text('List of food recommendations located in the Northeast \n\n' + northeast_food, parse_mode = 'HTML')
 
 def get_east(update, context):
-    file = open('east.txt')
-    east_food = file.read()
-    update.message.reply_text('List of food recommendations located in the East (to be updated)' + east_food, parse_mode = 'HTML')
+    #file = open('east.txt')
+    east_food = random_shuffle('east.txt')
+    update.message.reply_text('List of food recommendations located in the East \n\n' + east_food, parse_mode = 'HTML')
 
 def get_west(update, context):
-    file = open('west.txt')
-    west_food = file.read()
-    update.message.reply_text('List of food recommendations located in the West (to be updated)' + west_food, parse_mode = 'HTML')
+    #file = open('west.txt')
+    west_food = random_shuffle('west.txt')
+    update.message.reply_text('List of food recommendations located in the West \n\n' + west_food, parse_mode = 'HTML')
 
 def get_central(update, context):
-    file = open('central.txt')
-    central_food = file.read()
-    update.message.reply_text('List of food recommendations located in Central (to be updated)' + central_food, parse_mode = 'HTML')
+    #file = open('central.txt')
+    central_food = random_shuffle('central.txt')
+    update.message.reply_text('List of food recommendations located in Central \n\n' + central_food, parse_mode = 'HTML')
 
 def split_bills(update, context):
     update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")       
