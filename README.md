@@ -34,6 +34,15 @@ We aim to make it easy for users to find suitable places to have their meals, es
 
 ![Program Flow](https://user-images.githubusercontent.com/78203310/119811681-f296f880-bf19-11eb-9a05-f2b121839642.jpg)
 
+### How are we different from similar platforms?
+Yelp (Food recommendations App)
+- Unlike using Yelp where users have to download a new application, we make use of Telegram, which is already being used by our target groups, to make getting food recommendations much more convenient for them.
+
+
+GooglePay/ DBS PayLah!’s split bill function
+- GooglePay/ DBS PayLah! Would require users to have accounts which then requires secure logins since they are binded to bank accounts. By making use of Telegram, users can easily split bills without having to login or create accounts since they already have a Telegram account.
+
+
 # Milestone 2 (Prototype)
 
 // To include core features developed, problems encountered
@@ -42,11 +51,22 @@ We aim to make it easy for users to find suitable places to have their meals, es
 
 1. Hosting of Telegram Bot on Heroku
 2. Addition of calculate bill function to our split bills command
+3. Selection of food locations for the 5 different regions and embedding their Google Maps link
 
 ## Problems Encountered
+
+## Testing of FoodieFriends bot:
+Try our bot out @ FoodieFriendsBot on Telegram!
+
+Current cloud hosted version has working commands for split bills and food recommendation by region. 
+
+** The hosted version has a limited list of food places for now so there could be repetitions among the 3 recommendations given, we will be running the more extensive list of food places once we have tidied it up for the next milestone.
+
 
 # Milestone 3 (Extension)
 
 // To include bugs squashed, edge features developed, problems encountered, and user testing
+
+
 
 
