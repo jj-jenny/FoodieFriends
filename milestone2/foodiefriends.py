@@ -11,7 +11,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import decimal
 import random
 
-TOKEN = 'TOKEN'
+TOKEN = 'token'
 
 bot = telebot.TeleBot(TOKEN)
 user = bot.get_me()
@@ -69,27 +69,37 @@ def random_shuffle(fname):
 def get_north(update, context):
     #file = open('north.txt')
     north_food = random_shuffle('north.txt')
-    update.message.reply_text('List of food recommendations located in the North \n\n' + north_food, parse_mode = 'HTML')
+    update.message.reply_text('List of food recommendations located in the North \n\n' + north_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview=True)
 
 def get_northeast(update, context):
     #file = open('northeast.txt')
     northeast_food = random_shuffle('northeast.txt')
-    update.message.reply_text('List of food recommendations located in the Northeast \n\n' + northeast_food, parse_mode = 'HTML')
+    update.message.reply_text('List of food recommendations located in the Northeast \n\n' + northeast_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview=True)
 
 def get_east(update, context):
     #file = open('east.txt')
     east_food = random_shuffle('east.txt')
-    update.message.reply_text('List of food recommendations located in the East \n\n' + east_food, parse_mode = 'HTML')
+    update.message.reply_text('List of food recommendations located in the East \n\n' + east_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview=True)
 
 def get_west(update, context):
     #file = open('west.txt')
     west_food = random_shuffle('west.txt')
-    update.message.reply_text('List of food recommendations located in the West \n\n' + west_food, parse_mode = 'HTML')
+    update.message.reply_text('List of food recommendations located in the West \n\n' + west_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview=True)
 
 def get_central(update, context):
     #file = open('central.txt')
     central_food = random_shuffle('central.txt')
-    update.message.reply_text('List of food recommendations located in Central \n\n' + central_food, parse_mode = 'HTML')
+    update.message.reply_text('List of food recommendations located in Central \n\n' + central_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview=True)
 
 def split_bills(update, context):
     update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")       
