@@ -17,3 +17,63 @@ Blk 150 Bishan Street 11, Singapore 570150
 <b>Cibo Italiano</b>
 428 River Valley Rd, #01-01, Singapore 248327
 <a href="https://g.page/CiboItalianoRiverValley?share">Opening Hours</a>
+
+<b>Yi Jia South Village Seafood Restaurant (Macpherson)</b>
+552 MacPherson Rd, Singapore 368229
+<a href="https://goo.gl/maps/7YVZ8FMAN1vkHpqr7">Opening Hours</a>
+
+<b>Julaiha Muslim Restaurant</b>
+538 MacPherson Rd, Singapore 368222
+<a href="https://goo.gl/maps/1bWZdjgR6ZbKkj5A9">Opening Hours</a>
+
+<b>El Cocinero</b>
+275 Thomson Rd, #01-45, Singapore 307645
+<a href="https://g.page/elCocinerosg?share">Opening Hours</a>
+
+<b>Uno Beef House</b>
+51 Lor 6 Toa Payoh, Singapore 310051
+<a href="https://goo.gl/maps/MfzA8KPLn9jfdyoi9">Opening Hours</a>
+
+<b>Bangkok Street Mookata</b>
+211 Lor 8 Toa Payoh, #01-01, Singapore 310211
+<a href="https://goo.gl/maps/9LsomfPVBuiq7yAb6">Opening Hours</a>
+
+<b>Soi 47 Thai Food</b>
+47 Lor 6 Toa Payoh, Singapore 310047
+<a href="https://g.page/soi47?share">Opening Hours</a>
+
+<b>The Blue Ginger Tanjong Pagar</b>
+97 Tg Pagar Rd, Singapore 088518
+<a href="https://g.page/theblueginger?share">Opening Hours</a>
+
+<b>Kuro Maguro Sushi and Dining</b>
+7 Wallich St, #01 - 04, Singapore 078884
+<a href="https://g.page/KUROMAGUROMD?share">Opening Hours</a>
+
+<b>Bar-Roque Grill</b>
+165 Tg Pagar Rd, #01-00, Singapore 088539
+<a href="https://goo.gl/maps/MjXi5UqnrXWCPNkv6">Opening Hours</a>
+
+<b>Gravy Restaurant & Bar</b>
+1 Hoe Chiang Rd, Singapore 089310
+<a href="https://g.page/gravysg?share">Opening Hours</a>
+
+<b>Kko Kko Na Ra</b>
+68 Tg Pagar Rd, Singapore 088489
+<a href="https://g.page/kkokkonara?share">Opening Hours</a>
+
+<b>Nana Original Thai Food</b>
+5001 Beach Rd, #01-51/52/66A, Singapore 199588
+<a href="https://goo.gl/maps/oot5hdv1xbyvaJBS9">Opening Hours</a>
+
+<b>Tandoori Corner</b>
+400 Balestier Rd, #01-12 Balestier Plaza, Singapore 329802
+<a href="https://g.page/TandooriCornerBalestierRoad?share">Opening Hours</a>
+
+<b>Old Habits</b>
+2 Telok Blangah Way, Mt Faber, #01-04 Next to the Swimming Pool, SAFRA, 098803
+<a href="https://g.page/habitssg?share">Opening Hours</a>
+
+<b>Wildseed Café at The Alkaff Mansion</b>
+10 Telok Blangah Green, Singapore 109178
+<a href="https://g.page/wildseedsg-alkaff?share">Opening Hours</a>
