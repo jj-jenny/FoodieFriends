@@ -33,7 +33,7 @@ def start(update, context):
                                                                                                                      one_time_keyboard = True))
 
 def back(update, context):
-    options = [['Region', 'Postal Code']]
+    options = [['Region', 'Postal Code (to be updated)']]
     update.message.reply_text("Please select your region or enter your postal code.", reply_markup = telegram.ReplyKeyboardMarkup(options,
                                                                                                                                   resize_keyboard = True,
                                                                                                                                 one_time_keyboard = True))
