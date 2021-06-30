@@ -45,7 +45,7 @@ def get_recommendation(update, context):
                                                                                                                                 one_time_keyboard = True))
         
 def get_postalcd(update, context):
-    update.message.reply_text("Enter your postal code below! \U0001F60B")
+    update.message.reply_text("Enter your postal code below! \U0001F60B (function to be updated)")
 
 def food_near_pc(update, context):
     update.message.reply_text('to be updated')
