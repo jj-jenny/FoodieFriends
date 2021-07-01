@@ -49,3 +49,27 @@ Blk 150 Bishan Street 11, Singapore 570150
 <b>Lau Wang Claypot Delights</b>
 263 Serangoon Central Dr, #01-43, Singapore 550263
 <a href="https://goo.gl/maps/szCByq77yAhRGwvx6">Opening Hours</a>
+
+<b>Din Tai Fung</b>
+50 Jurong Gateway Rd, #02-07 Jem, Singapore 608549
+<a href="https://goo.gl/maps/Y7BFHJ8vqsieG3x27">Opening Hours</a>
+
+<b>West Co'z Cafe</b>
+154 W Coast Rd #02-23 West Coast Plaza, 127371
+<a href="https://g.page/westcozcafe?share">Opening Hours</a>
+
+<b>Hillman 99 Restaurant</b>
+99 Pasir Panjang Rd, Singapore 118517
+<a href="https://goo.gl/maps/WEqrm1AqUxFyySTt7">Opening Hours</a>
+
+<b>Zai Shun Curry Fish Head</b>
+253 Jurong East St 24, #01-205, Singapore 600253
+<a href="https://goo.gl/maps/VHyLnF5JWHS25ZHe7">Opening Hours</a>
+
+<b>Tiong Wah Restaurant</b>
+16 Teck Whye Ln, Singapore 680016
+<a href="https://goo.gl/maps/HDW4M9ACuCmzxgeo7">Opening Hours</a>
+
+<b>Bukit Panjang Ke Kou Mian</b>
+163A Gangsa Rd, Singapore 671163
+<a href="https://goo.gl/maps/cZs3jNRjhW4ysSt16">Opening Hours</a>
