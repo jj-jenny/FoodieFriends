@@ -73,3 +73,51 @@ Blk 150 Bishan Street 11, Singapore 570150
 <b>Bukit Panjang Ke Kou Mian</b>
 163A Gangsa Rd, Singapore 671163
 <a href="https://goo.gl/maps/cZs3jNRjhW4ysSt16">Opening Hours</a>
+
+<b>Lotus Garden Restaurant</b>
+1 West Coast Drive, #01-78 NEWest, W Coast Dr, Singapore 128020
+<a href="https://goo.gl/maps/UEsuHLcpvEgnkxtm7">Opening Hours</a>
+
+<b>Legendary Hong Kong Restaurant 港飲港食餐廳</b>
+63 Jurong West Central 3 #03-80 Provisional, Unit, 2 Shopping Center, Jurong Point, 648331
+<a href="https://goo.gl/maps/sWque44K6AgaxsHj7">Opening Hours</a>
+
+<b>Choon Seng Hng</b>
+1 Choa Chu Kang Grove, #02-02 ITE College West, Singapore 688236
+<a href="https://goo.gl/maps/SjUidiBHzB4oDMnp8">Opening Hours</a>
+
+<b>Sum Kee Food</b>
+19 Yung Ho Rd, Singapore 618592
+<a href="https://g.page/sumkeefoodjurong?share">Opening Hours</a>
+
+<b>Sichuan Tianfu Restaurant 天府川菜</b>
+3151 Commonwealth Ave W, #01-17/18 Grantral Mall, Singapore 129581
+<a href="https://g.page/sichuan-tianfu-restaurant-tianf?share">Opening Hours</a>
+
+<b>925 Yishun Hainanese Chicken Rice</b>
+Blk 1 #01-249, 925 Yishun Central, Singapore 760925
+<a href="https://goo.gl/maps/iTiQ3RZiir5xNgfm8">Opening Hours</a>
+
+<b>Kuai San Dim Sum (Woodlands)</b>
+21 Woodlands Cl, Primz Bizhub, Singapore 737854
+<a href="https://goo.gl/maps/2zfZyHDEYNKusDyGA">Opening Hours</a>
+
+<b>White Restaurant @ Jalan Tampang</b>
+22 Jln Tampang, Singapore 758966
+<a href="https://goo.gl/maps/jbQJUpTnSemBoPzM6">Opening Hours</a>
+
+<b>Xin Wang Hong Kong Café (Northpoint)</b>
+930 Yishun Ave 2, Northpoint City North Wing, #01-40, 769098
+<a href="https://goo.gl/maps/wd4tabNsd6EQSaSY6">Opening Hours</a>
+
+<b>King of Fried Rice - Wisteria Mall</b>
+598 Yishun Ring Rd, #B1-03 Wisteria Mall, Singapore 768698
+<a href="https://goo.gl/maps/8oQZp21WAUrTZDTh7">Opening Hours</a>
+
+<b>Feng Food</b>
+930 Yishun Ave 2, #B1-156, Singapore 769098
+<a href="https://goo.gl/maps/4S3z5rn7CvkTWLeh8">Opening Hours</a>
+
+<b>Tun Xiang</b>
+930 Yishun Ave 2, #02-28, Singapore 769098
+<a href="https://goo.gl/maps/F7PuCmixVyt3aHLg6">Opening Hours</a>
