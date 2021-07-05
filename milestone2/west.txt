@@ -77,3 +77,7 @@ Blk 451 Bukit Batok West Ave 6, Singapore 650451
 <b>iO Italian Osteria Singapore</b>
 4 Hillview Rise, 02-01, Singapore 667979
 <a href="https://goo.gl/maps/3zhPu6ydQ1yAZBc19">Opening Hours</a>
+
+<b>Golden Thai Village</b>
+296A Bukit Batok Street 22, Singapore 650298
+<a href="https://goo.gl/maps/uBe9W6TyRYqYZUhq9">Opening Hours</a>
