@@ -238,8 +238,12 @@ def main() -> None:
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("back", back))
-    dispatcher.add_handler(CommandHandler("calculate", calculate))
+    dispatcher.add_handler(CommandHandler("postal_code", get_postalcd))
     dispatcher.add_handler(CommandHandler("postalcode", postalcode))
+    dispatcher.add_handler(CommandHandler("region", get_region))
+    dispatcher.add_handler(CommandHandler("cuisine", get_cuisine))
+    dispatcher.add_handler(CommandHandler("split_bills", split_bills))
+    dispatcher.add_handler(CommandHandler("calculate", calculate))
 
     # on non command i.e message - echo the message on Telegram
     dispatcher.add_handler(MessageHandler(Filters.regex('Food recommendation \U0001F924'), get_recommendation))
