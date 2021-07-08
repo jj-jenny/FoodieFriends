@@ -241,6 +241,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("postal_code", get_postalcd))
     dispatcher.add_handler(CommandHandler("postalcode", postalcode))
     dispatcher.add_handler(CommandHandler("region", get_region))
+    dispatcher.add_handler(CommandHandler("cuisine", get_cuisine))
     dispatcher.add_handler(CommandHandler("split_bills", split_bills))
     dispatcher.add_handler(CommandHandler("calculate", calculate))
 
