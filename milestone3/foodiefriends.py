@@ -240,8 +240,8 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("back", back))
     dispatcher.add_handler(CommandHandler("postal_code", get_postalcd))
     dispatcher.add_handler(CommandHandler("postalcode", postalcode))
-    dispatcher.add_handler("region", get_region))
-    dispatcher.add_handler("split_bills", split_bills))
+    dispatcher.add_handler(CommandHandler("region", get_region))
+    dispatcher.add_handler(CommandHandler("split_bills", split_bills))
     dispatcher.add_handler(CommandHandler("calculate", calculate))
 
     # on non command i.e message - echo the message on Telegram
