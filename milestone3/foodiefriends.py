@@ -11,7 +11,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import decimal
 import random
 
-TOKEN = '1867664350:AAEmPsNyYfQkNZsvopSGmnG9gw0TsU3tcyo'
+TOKEN = 'token'
 
 bot = telebot.TeleBot(TOKEN)
 user = bot.get_me()
@@ -45,12 +45,15 @@ def get_recommendation(update, context):
                                                                                                                                   one_time_keyboard = True))
   
 def get_location(update, context):
-    options = [['Region', 'Postal Code (to be updated)']]
-    update.message.reply_text("Please select your region or enter your postal code.", reply_markup = telegram.ReplyKeyboardMarkup(options,
-                                                                                                                                  resize_keyboard = True,
-                                                                                                                                one_time_keyboard = True))       
+    options = [['1. North', '2. Northeast', '3. East'], ['4. West', '5. Central', '/back']]
+    update.message.reply_text("Please select your region or enter your postal code below! \U0001F60B \n\nEg: /postalcode 123456", reply_markup = telegram.ReplyKeyboardMarkup(options, resize_keyboard = True))
+
+    #options = [['Region', 'Postal Code (to be updated)']]
+    #update.message.reply_text("Please select your region or enter your postal code!", reply_markup = telegram.ReplyKeyboardMarkup(options,
+                                                                                                                                  #resize_keyboard = True,
+                                                                                                                                #one_time_keyboard = True))       
 def get_postalcd(update, context):
-    update.message.reply_text("Enter your postal code below! \U0001F60B (function to be updated)")
+    update.message.reply_text("Enter your postal code below! \U0001F60B \nEg: /postalcode 123456")
 
 def postalcode(update, context):
     userinput = update.message.text.split(" ")
