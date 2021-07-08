@@ -210,6 +210,12 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("back", back))
     dispatcher.add_handler(CommandHandler("calculate", calculate))
+    dispatcher.add_handler(CommandHandler("splitbill", split_bills))
+    dispatcher.add_handler(CommandHandler("recommendation", get_recommendation))
+    dispatcher.add_handler(CommandHandler("region", get_region))
+    dispatcher.add_handler(CommandHandler("postal_code", get_postalcd))
+    dispatcher.add_handler(CommandHandler("cuisine", get_cuisine))
+
 
     # on non command i.e message - echo the message on Telegram
     dispatcher.add_handler(MessageHandler(Filters.regex('Food recommendation \U0001F924'), get_recommendation))
