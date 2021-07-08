@@ -69,3 +69,35 @@ Yishun Ave 11, Block 343, Singapore 760343
 <b>Dil 'B Restaurant</b>
 1 Changi Village Rd, Block 1, 2026, Singapore 500001
 <a href="https://g.page/dilbrestaurant?share">Opening Hours</a>
+
+<b>Srisun Express Serangoon Garden</b>
+56 Serangoon Garden Way, Singapore 555952
+<a href="https://g.page/srisun-express-serangoon-garden?share">Opening Hours</a>
+
+<b>Al Falah Restaurant</b>
+681 Hougang Ave 8, #01-855, Singapore 530681
+<a href="https://g.page/al-falah-restaurant?share">Opening Hours</a>
+
+<b>Thasevi Food</b>
+239 Jln Kayu, Singapore 799463
+<a href="https://goo.gl/maps/PspnhvzZwP9ivFuM8">Opening Hours</a>
+
+<b>Thohirah Restaurant</b>
+258 Jln Kayu, Singapore 799487
+<a href="https://goo.gl/maps/BPjewJaj99tFKBJKA">Opening Hours</a>
+
+<b>Mustard Singapore- Flavours of Bengal & Punjab</b>
+32 Race Course Rd, Singapore 218552
+<a href="https://goo.gl/maps/XSwvX3wnx9WgFMxVA">Opening Hours</a>
+
+<b>Jaggi’s Northern Indian Cuisine</b>
+36 Race Course Rd, Singapore 218554
+<a href="https://goo.gl/maps/tvgf9ooBDscfHJd88">Opening Hours</a>
+
+<b>Khansama Tandoori Restaurant</b>
+166 Serangoon Road Junction of, Norris Rd, 218050
+<a href="https://g.page/khansamarestaurent?share">Opening Hours</a>
+
+<b>Julaiha Muslim Restaurant</b>
+538 MacPherson Rd, Singapore 368222
+<a href="https://goo.gl/maps/1bWZdjgR6ZbKkj5A9">Opening Hours</a>
