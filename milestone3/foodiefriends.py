@@ -73,8 +73,15 @@ def postalcode(update, context):
         final = output
 
     str1 = ''
+    result = ''
+    if len(userinput[1]) != 6:
+      result = "Invalid postal code entered! Please try again."
+    elif len(final) == 0:
+      result = "No recommendations at the moment! We will work to expand our database."
+    else:
+      result = "Here are some food places near you! \U0001F929 \n\n" + str1.join(final)
         
-    update.message.reply_text("Here are some food places near you! \U0001F929 \n\n" + str1.join(final), parse_mode = 'HTML', disable_web_page_preview = True)
+    update.message.reply_text(result, parse_mode = 'HTML', disable_web_page_preview = True)
 
 def food_near_pc(update, context):
     update.message.reply_text('to be updated')
