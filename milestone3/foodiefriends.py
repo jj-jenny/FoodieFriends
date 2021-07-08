@@ -75,7 +75,7 @@ def postalcode(update, context):
     str1 = ''
     
     result = ''
-    if len(userinput[1]) != 6:
+    if len(pc) != 6:
       result = "Invalid postal code entered! Please try again."
     elif len(final) == 0:
       result = "No recommendations at the moment! We will work to expand our database."
@@ -146,13 +146,13 @@ def get_central(update, context):
     
 def get_chinese(update, context):
     chinese_food = random_shuffle('chinese.txt')
-    update.message.reply_text('Here are some Chinese food recommendations! \n\n' + chinese_food + "\n\n Click again for more!",
+    update.message.reply_text('Here are some Chinese food recommendations! \n\n' + chinese_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_malay(update, context):
     malay_food = random_shuffle('malay.txt')
-    update.message.reply_text('Here are some Malay food recommendations! \n\n' + malay_food + "\n\n Click again for more!",
+    update.message.reply_text('Here are some Malay food recommendations! \n\n' + malay_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
@@ -238,12 +238,8 @@ def main() -> None:
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("back", back))
-    dispatcher.add_handler(CommandHandler("postal_code", get_postalcd))
-    dispatcher.add_handler(CommandHandler("postalcode", postalcode))
-    dispatcher.add_handler(CommandHandler("region", get_region))
-    dispatcher.add_handler(CommandHandler("cuisine", get_cuisine))
-    dispatcher.add_handler(CommandHandler("split_bills", split_bills))
     dispatcher.add_handler(CommandHandler("calculate", calculate))
+    dispatcher.add_handler(CommandHandler("postalcode", postalcode))
 
     # on non command i.e message - echo the message on Telegram
     dispatcher.add_handler(MessageHandler(Filters.regex('Food recommendation \U0001F924'), get_recommendation))
@@ -280,6 +276,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-
-
 
