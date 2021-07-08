@@ -39,11 +39,16 @@ def back(update, context):
                                                                                                                                 one_time_keyboard = True))
 
 def get_recommendation(update, context):
+    options = [['Location', 'Cuisine']]
+    update.message.reply_text("Looking for something to eat? Use the buttons below to filter by location or cuisine!", reply_markup = telegram.ReplyKeyboardMarkup(options,
+                                                                                                                                  resize_keyboard = True,
+                                                                                                                                  one_time_keyboard = True))
+  
+def get_location(update, context):
     options = [['Region', 'Postal Code (to be updated)']]
     update.message.reply_text("Please select your region or enter your postal code.", reply_markup = telegram.ReplyKeyboardMarkup(options,
                                                                                                                                   resize_keyboard = True,
-                                                                                                                                one_time_keyboard = True))
-        
+                                                                                                                                one_time_keyboard = True))       
 def get_postalcd(update, context):
     update.message.reply_text("Enter your postal code below! \U0001F60B (function to be updated)")
 
@@ -55,6 +60,11 @@ def get_region(update, context):
     options = [['1. North', '2. Northeast', '3. East'], ['4. West', '5. Central', '/back']]
     update.message.reply_text("Where are you now? \U0001F914", reply_markup = telegram.ReplyKeyboardMarkup(options, resize_keyboard = True))
 
+def get_cuisine(update, context):
+    options = [['Chinese', 'Malay', 'Indian'], ['Western', 'Thai', 'Others']]
+    update.message.reply_text("Select what you're craving for!", reply_markup = telegram.ReplyKeyboardMarkup(options, 
+                                                                                                             resize_keyboard = True))
+    
 def random_shuffle(fname):
     lines = open(fname).read()
     paragraphs = lines.split('\n\n')
@@ -98,6 +108,41 @@ def get_central(update, context):
     #file = open('central.txt')
     central_food = random_shuffle('central.txt')
     update.message.reply_text('List of food recommendations located in Central \n\n' + central_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview = True)
+    
+def get_chinese(update, context):
+    chinese_food = random_shuffle('chinese.txt')
+    update.message.reply_text('Here are some Chinese food recommendations! \n\n' + chinese_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview = True)
+    
+def get_malay(update, context):
+    malay_food = random_shuffle('malay.txt')
+    update.message.reply_text('Here are some Malay food recommendations! \n\n' + malay_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview = True)
+    
+def get_indian(update, context):
+    indian_food = random_shuffle('indian.txt')
+    update.message.reply_text('Here are some Indian food recommendations! \n\n' + indian_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview = True)
+    
+def get_western(update, context):
+    western_food = random_shuffle('western.txt')
+    update.message.reply_text('Here are some Western food recommendations! \n\n' + western_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview = True)
+def get_thai(update, context):
+    thai_food = random_shuffle('thai.txt')
+    update.message.reply_text('Here are some Thai food recommendations! \n\n' + thai_food,
+                              parse_mode = 'HTML',
+                              disable_web_page_preview = True)
+    
+def get_others(update, context):
+    other_food = random_shuffle('others.txt')
+    update.message.reply_tezt('Here are some miscellaneous food recommendations! \n\n' + other_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
 
@@ -172,6 +217,14 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.regex('3. East'), get_east))
     dispatcher.add_handler(MessageHandler(Filters.regex('4. West'), get_west))
     dispatcher.add_handler(MessageHandler(Filters.regex('5. Central'), get_central))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Location'), get_location))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Cuisine'), get_cuisine))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Chinese'), get_chinese))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Malay'), get_malay))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Indian'), get_indian))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Western'), get_western))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Thai'), get_thai))
+    dispatcher.add_handler(MessageHandler(Filters.regex('Others'), get_others))
                     
     # Start the Bot
     updater.start_polling()
