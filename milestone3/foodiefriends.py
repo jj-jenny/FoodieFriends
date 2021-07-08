@@ -48,7 +48,9 @@ def get_location(update, context):
     options = [['Region', 'Postal Code (to be updated)']]
     update.message.reply_text("Please select your region or enter your postal code.", reply_markup = telegram.ReplyKeyboardMarkup(options,
                                                                                                                                   resize_keyboard = True,
-                                                                                                                                one_time_keyboard = True))       
+                                                                                                                                one_time_keyboard = True))    
+    
+#Postal Code    
 def get_postalcd(update, context):
     update.message.reply_text("Enter your postal code below! \U0001F60B (function to be updated)")
 
@@ -56,6 +58,7 @@ def food_near_pc(update, context):
     update.message.reply_text('to be updated')
         ##TODO
 
+#Region
 def get_region(update, context):
     options = [['1. North', '2. Northeast', '3. East'], ['4. West', '5. Central', '/back']]
     update.message.reply_text("Where are you now? \U0001F914", reply_markup = telegram.ReplyKeyboardMarkup(options, resize_keyboard = True))
@@ -145,7 +148,8 @@ def get_others(update, context):
     update.message.reply_tezt('Here are some miscellaneous food recommendations! \n\n' + other_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
-
+    
+#Split Bill
 def split_bills(update, context):
     update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")       
 
