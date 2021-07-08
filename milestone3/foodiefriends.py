@@ -11,7 +11,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import decimal
 import random
 
-TOKEN = 'token'
+TOKEN = '1867664350:AAEmPsNyYfQkNZsvopSGmnG9gw0TsU3tcyo'
 
 bot = telebot.TeleBot(TOKEN)
 user = bot.get_me()
@@ -48,17 +48,35 @@ def get_location(update, context):
     options = [['Region', 'Postal Code (to be updated)']]
     update.message.reply_text("Please select your region or enter your postal code.", reply_markup = telegram.ReplyKeyboardMarkup(options,
                                                                                                                                   resize_keyboard = True,
-                                                                                                                                one_time_keyboard = True))    
-    
-#Postal Code    
+                                                                                                                                one_time_keyboard = True))       
 def get_postalcd(update, context):
     update.message.reply_text("Enter your postal code below! \U0001F60B (function to be updated)")
+
+def postalcode(update, context):
+    userinput = update.message.text.split(" ")
+    pc = userinput[1]
+    places = open('everything.txt').read()
+    para = places.split('\n\n')
+    random.shuffle(para)
+    output = []
+    for i in para:
+        before, key, after = i.partition('Singapore')
+        if after[1:3] == pc[0:2] :
+            output.append(i + "\n\n")
+
+    if len(output) > 5:
+        final = output[0:5]
+    else:
+        final = output
+
+    str1 = ''
+        
+    update.message.reply_text("Here are some food places near you! \U0001F929 \n\n" + str1.join(final), parse_mode = 'HTML', disable_web_page_preview = True)
 
 def food_near_pc(update, context):
     update.message.reply_text('to be updated')
         ##TODO
 
-#Region
 def get_region(update, context):
     options = [['1. North', '2. Northeast', '3. East'], ['4. West', '5. Central', '/back']]
     update.message.reply_text("Where are you now? \U0001F914", reply_markup = telegram.ReplyKeyboardMarkup(options, resize_keyboard = True))
@@ -145,11 +163,10 @@ def get_thai(update, context):
     
 def get_others(update, context):
     other_food = random_shuffle('others.txt')
-    update.message.reply_tezt('Here are some miscellaneous food recommendations! \n\n' + other_food,
+    update.message.reply_text('Here are some miscellaneous food recommendations! \n\n' + other_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
-    
-#Split Bill
+
 def split_bills(update, context):
     update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")       
 
@@ -210,12 +227,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("back", back))
     dispatcher.add_handler(CommandHandler("calculate", calculate))
-    dispatcher.add_handler(CommandHandler("splitbill", split_bills))
-    dispatcher.add_handler(CommandHandler("recommendation", get_recommendation))
-    dispatcher.add_handler(CommandHandler("region", get_region))
-    dispatcher.add_handler(CommandHandler("postal_code", get_postalcd))
-    dispatcher.add_handler(CommandHandler("cuisine", get_cuisine))
-
+    dispatcher.add_handler(CommandHandler("postalcode", postalcode))
 
     # on non command i.e message - echo the message on Telegram
     dispatcher.add_handler(MessageHandler(Filters.regex('Food recommendation \U0001F924'), get_recommendation))
@@ -252,4 +264,6 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
+
 
