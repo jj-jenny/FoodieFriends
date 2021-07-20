@@ -144,38 +144,55 @@ def get_central(update, context):
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
+def filter_cuisine(fname, input):
+    lines = open(fname).read()
+    paragraphs = lines.split('\n\n')
+    output = []
+    for p in paragraphs: 
+        if p.contains(input):
+            output.append(p + "\n\n")
+        
+    return output
+    
+    
 def get_chinese(update, context):
-    chinese_food = random_shuffle('chinese.txt')
+    input = "Chinese"
+    chinese_food = random_shuffle(filter_cuisine('chinese.txt', input))
     update.message.reply_text('Here are some Chinese food recommendations! \n\n' + chinese_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_malay(update, context):
-    malay_food = random_shuffle('malay.txt')
+    input = "Malay"
+    malay_food = random_shuffle(filter_cuisine('malay.txt', input))
     update.message.reply_text('Here are some Malay food recommendations! \n\n' + malay_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_indian(update, context):
-    indian_food = random_shuffle('indian.txt')
+    input = "Indian"
+    indian_food = random_shuffle(filter_cuisine('indian.txt', input))
     update.message.reply_text('Here are some Indian food recommendations! \n\n' + indian_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_western(update, context):
-    western_food = random_shuffle('western.txt')
+    input = "Western"
+    western_food = random_shuffle(filter_cuisine('western.txt', input))
     update.message.reply_text('Here are some Western food recommendations! \n\n' + western_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
+    
 def get_thai(update, context):
-    thai_food = random_shuffle('thai.txt')
+    input = "Thai"
+    thai_food = random_shuffle(filter_cuisine('thai.txt', input))
     update.message.reply_text('Here are some Thai food recommendations! \n\n' + thai_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_others(update, context):
     other_food = random_shuffle('others.txt')
-    update.message.reply_text('Here are some miscellaneous food recommendations! \n\n' + other_food,
+    update.message.reply_text('Here are some more food recommendations! \n\n' + other_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
 
