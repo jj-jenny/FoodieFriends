@@ -165,41 +165,41 @@ def filter_cuisine(fname, input_text):
 def get_chinese(update, context):
     input_text = "Chinese"
     chinese_food = filter_cuisine('everything.txt', input_text)
-    update.message.reply_text('Here are some Chinese food recommendations! \n\n' + chinese_food,
+    update.message.reply_text('Here are some Chinese food recommendations! \n\n' + chinese_food  + "Press again for more!",
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_malay(update, context):
     input_text = "Malay"
     malay_food = filter_cuisine('everything.txt', input_text)
-    update.message.reply_text('Here are some Malay food recommendations! \n\n' + malay_food,
+    update.message.reply_text('Here are some Malay food recommendations! \n\n' + malay_food  + "Press again for more!",
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_indian(update, context):
     input_text = "Indian"
     indian_food = filter_cuisine('everything.txt', input_text)
-    update.message.reply_text('Here are some Indian food recommendations! \n\n' + indian_food,
+    update.message.reply_text('Here are some Indian food recommendations! \n\n' + indian_food + "Press again for more!",
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_western(update, context):
     input_text = "Western"
     western_food = filter_cuisine('everything.txt', input_text)
-    update.message.reply_text('Here are some Western food recommendations! \n\n' + western_food,
+    update.message.reply_text('Here are some Western food recommendations! \n\n' + western_food + "Press again for more!",
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_thai(update, context):
     input_text = "Thai"
     thai_food = filter_cuisine('everything.txt', input_text)
-    update.message.reply_text('Here are some Thai food recommendations! \n\n' + thai_food,
+    update.message.reply_text('Here are some Thai food recommendations! \n\n' + thai_food + "Press again for more!",
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_others(update, context):
     other_food = random_shuffle('others.txt')
-    update.message.reply_text('Here are some more food recommendations! \n\n' + other_food,
+    update.message.reply_text('Here are some more food recommendations! \n\n' + other_food + "Press again for more!",
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
 
