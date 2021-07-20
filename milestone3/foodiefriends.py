@@ -11,8 +11,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import decimal
 import random
 
-#TOKEN = '1754559930:AAGk8J4IbywhOE-RfH8UVN-fWXl9I-zKJ7E' #actual
-TOKEN = "1867664350:AAEmPsNyYfQkNZsvopSGmnG9gw0TsU3tcyo" #demos
+TOKEN = ""
 
 bot = telebot.TeleBot(TOKEN)
 user = bot.get_me()
