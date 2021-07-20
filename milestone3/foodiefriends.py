@@ -11,7 +11,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import decimal
 import random
 
-TOKEN = ''
+TOKEN = ""
 
 bot = telebot.TeleBot(TOKEN)
 user = bot.get_me()
@@ -144,48 +144,54 @@ def get_central(update, context):
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
-def filter_cuisine(fname, input):
+def filter_cuisine(fname, input_text):
     lines = open(fname).read()
     paragraphs = lines.split('\n\n')
-    output = []
-    for p in paragraphs: 
-        if p.contains(input):
-            output.append(p + "\n\n")
-        
-    return output
-    
-    
+    random.shuffle(paragraphs)
+    filtered = ""
+    for p in paragraphs:
+        if input_text in p:
+            filtered += p + "\n\n"
+    new_file = filtered.split('\n\n')
+    random.shuffle(new_file)
+    i = 0
+    output = ""
+    while i < 3:
+        output = output + new_file[i] + "\n\n"
+        i = i + 1
+    return output    
+      
 def get_chinese(update, context):
-    input = "Chinese"
-    chinese_food = random_shuffle(filter_cuisine('chinese.txt', input))
+    input_text = "Chinese"
+    chinese_food = filter_cuisine('everything.txt', input_text)
     update.message.reply_text('Here are some Chinese food recommendations! \n\n' + chinese_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_malay(update, context):
-    input = "Malay"
-    malay_food = random_shuffle(filter_cuisine('malay.txt', input))
+    input_text = "Malay"
+    malay_food = filter_cuisine('everything.txt', input_text)
     update.message.reply_text('Here are some Malay food recommendations! \n\n' + malay_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_indian(update, context):
-    input = "Indian"
-    indian_food = random_shuffle(filter_cuisine('indian.txt', input))
+    input_text = "Indian"
+    indian_food = filter_cuisine('everything.txt', input_text)
     update.message.reply_text('Here are some Indian food recommendations! \n\n' + indian_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_western(update, context):
-    input = "Western"
-    western_food = random_shuffle(filter_cuisine('western.txt', input))
+    input_text = "Western"
+    western_food = filter_cuisine('everything.txt', input_text)
     update.message.reply_text('Here are some Western food recommendations! \n\n' + western_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
     
 def get_thai(update, context):
-    input = "Thai"
-    thai_food = random_shuffle(filter_cuisine('thai.txt', input))
+    input_text = "Thai"
+    thai_food = filter_cuisine('everything.txt', input_text)
     update.message.reply_text('Here are some Thai food recommendations! \n\n' + thai_food,
                               parse_mode = 'HTML',
                               disable_web_page_preview = True)
@@ -304,4 +310,3 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-
