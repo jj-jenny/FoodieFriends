@@ -215,35 +215,42 @@ def calculate(update: Update, _: CallbackContext) -> None:
             names.append(terms[i])
             i = i + 1
         else:
-            amounts.append(decimal.Decimal(terms[i]))
-            i = i + 1
-
-    # total amount to pay
-    total = sum(amounts)
-
-    # amount per person
-    decimal.getcontext().prec = 3
-    ave_amt = decimal.Decimal(total / len(names))
-
-    # amount to pay/receive
-    diffs = [ave_amt - amnt for amnt in amounts]
-    
-    to_pay = ""
-    index = 0
-    while index < len(names):
-        if diffs[index] > 0:
-            to_pay = to_pay + ("\n" + names[index] + " should pay $" + str(diffs[index]))
-            index += 1
-        elif diffs[index] == 0:
-            to_pay = to_pay + ("\n" + names[index] + " does not have to pay")
-            index += 1
-        else:
-            to_pay = to_pay + ("\n" + names[index] + " should receive $" + str(diffs[index]*(-1)))
-            index += 1
+            try:
+                amounts.append(decimal.Decimal(terms[i]))
+                i = i + 1
+            except decimal.InvalidOperation:
+                amounts = "Error! Invalid expression entered, please check and ensure names doesn't have spacings."
+                break
             
-    #return response
-    update.message.reply_text(f"{to_pay}")
+    if type(amounts) is not str:
+        # total amount to pay
+        total = sum(amounts)
 
+        # amount per person
+        decimal.getcontext().prec = 3
+        ave_amt = decimal.Decimal(total / len(names))
+
+        # amount to pay/receive
+        diffs = [ave_amt - amnt for amnt in amounts]
+        
+        to_pay = ""
+        index = 0
+        while index < len(names):
+            if diffs[index] > 0:
+                to_pay = to_pay + ("\n" + names[index] + " should pay $" + str(diffs[index]))
+                index += 1
+            elif diffs[index] == 0:
+                to_pay = to_pay + ("\n" + names[index] + " does not have to pay")
+                index += 1
+            else:
+                to_pay = to_pay + ("\n" + names[index] + " should receive $" + str(diffs[index]*(-1)))
+                index += 1
+                
+        #return response
+        update.message.reply_text(f"{to_pay}")
+    else:
+        update.message.reply_text(f"{amounts}")
+        
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
