@@ -152,7 +152,8 @@ def filter_cuisine(fname, input_text):
     for p in paragraphs:
         if input_text in p:
             filtered += p + "\n\n"
-    new_file = filtered.split('\n\n')
+    filtered_1 = filtered[0:-4]
+    new_file = filtered_1.split('\n\n')
     random.shuffle(new_file)
     i = 0
     output = ""
