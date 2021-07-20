@@ -32,7 +32,7 @@ We aim to make it easy for users to find suitable places to have their meals, es
 - Generate food recommendations based on location and food preferences.
 - Split bills among groups.
 
-![Program Flow](https://user-images.githubusercontent.com/78203310/119811681-f296f880-bf19-11eb-9a05-f2b121839642.jpg)
+![Programme Flow](https://user-images.githubusercontent.com/78203310/126294720-50170cdb-f890-4557-95a0-0f2500ea27f5.jpg)
 
 ### How are we different from similar platforms?
 Yelp (Food recommendations App)
@@ -66,6 +66,20 @@ Current cloud hosted version has working commands for split bills and food recom
 # Milestone 3 (Extension)
 
 // To include bugs squashed, edge features developed, problems encountered, and user testing
+Milestone 3 updates:
+
+To do:
+- Increase number of food places per region to 50 each -- DONE
+- Sort by cuisine type (Chinese, Indian, Malay, Western) -- DONE
+- Sort by postal code (read first 2 digits then filter from txt file) -- DONE
+- Add new commands -- DONE
+- BotFather /help commands or easy access -- DONE
+- User Testing
+- Include price range indication for food places -- DONE
+- Include cuisine indication into region -- DONE
+- Improve code for filtering by cuisine type -- DONE
+- Debug side cases for split bill function (names with spaces, $ for amounts) -- DONE
+
 
 
 
