@@ -11,7 +11,8 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import decimal
 import random
 
-TOKEN = ""
+#TOKEN = '1754559930:AAGk8J4IbywhOE-RfH8UVN-fWXl9I-zKJ7E' #actual
+TOKEN = "1867664350:AAEmPsNyYfQkNZsvopSGmnG9gw0TsU3tcyo" #demos
 
 bot = telebot.TeleBot(TOKEN)
 user = bot.get_me()
@@ -203,8 +204,10 @@ def get_others(update, context):
                               disable_web_page_preview = True)
 
 def split_bills(update, context):
-    update.message.reply_text("Please enter each person and their amount paid in the following format: \n /calculate Name Amount Name Amount")       
-
+    update.message.reply_text("Please enter each person and their amount paid in the following format:" +
+                              "\n /calculate Name Amount Name Amount" + 
+                              "\n\n E.G. /calculate james 1.20 jason 5.80 jess 0")  
+    
 # Calculate Bill
 def calculate(update: Update, _: CallbackContext) -> None:
     """Splits the bill"""
@@ -225,7 +228,7 @@ def calculate(update: Update, _: CallbackContext) -> None:
                 amounts.append(decimal.Decimal(terms[i]))
                 i = i + 1
             except decimal.InvalidOperation:
-                amounts = "Error! Invalid expression entered, please check and ensure names doesn't have spacings."
+                amounts = "Error! Invalid expression entered, please check and ensure names doesn't have spacings and amounts don't include $."
                 break
             
     if type(amounts) is not str:
