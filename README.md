@@ -80,7 +80,7 @@ To do:
 - Improve code for filtering by cuisine type -- DONE
 - Debug side cases for split bill function (names with spaces, $ for amounts) -- DONE
 
-
+https://docs.google.com/document/d/1ddv3aLesPcRdzKxA5241zh_DvN9_7TZxUAXO9Un93j4/edit
 
 
 
