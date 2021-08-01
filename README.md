@@ -47,7 +47,7 @@ GooglePay/ DBS PayLah!’s split bill function
 
 // Includes core features developed, problems encountered
 
-## Updates
+## Updates, Features and Problems encountered
 
 1. Hosting of Telegram Bot on Heroku 
 
@@ -72,16 +72,6 @@ GooglePay/ DBS PayLah!’s split bill function
     - This prevents the message from being too long while also ensuring that users can see many different food recommendations.
 
 
-## Problems Encountered
-
-## Testing of FoodieFriends bot:
-Try our bot out @ FoodieFriendsBot on Telegram!
-
-Current cloud hosted version has working commands for split bills and food recommendation by region. 
-
-** The hosted version has a limited list of food places for now so there could be repetitions among the 3 recommendations given, we will be running the more extensive list of food places once we have tidied it up for the next milestone.
-
-
 # Milestone 3 (Extension)
 
 // To include bugs squashed, edge features developed, problems encountered, and user testing
@@ -99,7 +89,13 @@ To do:
 - Improve code for filtering by cuisine type -- DONE
 - Debug side cases for split bill function (names with spaces, $ for amounts) -- DONE
 
-https://docs.google.com/document/d/1ddv3aLesPcRdzKxA5241zh_DvN9_7TZxUAXO9Un93j4/edit
+
+## Testing of FoodieFriends bot:
+Try our bot out @ FoodieFriendsBot on Telegram!
+
+Current cloud hosted version has working commands for split bills and food recommendation by region. 
+
+README GDOC: https://docs.google.com/document/d/1FB3Lspx5IpIAiJI42V_CIAmzAZ1mfNGYC-9NvBehqL0/edit?usp=sharing
 
 
 
