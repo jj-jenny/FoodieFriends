@@ -65,8 +65,12 @@ GooglePay/ DBS PayLah!’s split bill function
 3. Selection of food locations for the 5 different regions and embedding their Google Maps link
 
     3.1 During our selection of locations, we realized that Singapore does not have a South region and has Northeast as the fifth region instead.
-    4.
-    5.2 The database of food locations will have many different recommendations and it will be very messy if we display them all every time.
+    - Modified our South command into Northeast and its relevant food places.
+
+    3.2 The database of food locations will have many different recommendations and it will be very messy if we display them all every time.
+    - We modified our bot to display a list of 3 different random food recommendations everytime. To get more recommendations, users can simply press the specific region button again for a different set of recommendations.
+    - This prevents the message from being too long while also ensuring that users can see many different food recommendations.
+
 
 ## Problems Encountered
 
