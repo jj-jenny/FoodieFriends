@@ -47,7 +47,7 @@ GooglePay/ DBS PayLah!’s split bill function
 
 // Includes core features developed, problems encountered
 
-## Updates, Features and Problems encountered
+## Updates, Features and Problems Encountered
 
 1. Hosting of Telegram Bot on Heroku 
 
@@ -83,7 +83,7 @@ To do:
 - Sort by postal code (read first 2 digits then filter from txt file) -- DONE
 - Add new commands -- DONE
 - BotFather /help commands or easy access -- DONE
-- User Testing
+- User Testing -- DONE
 - Include price range indication for food places -- DONE
 - Include cuisine indication into region -- DONE
 - Improve code for filtering by cuisine type -- DONE
