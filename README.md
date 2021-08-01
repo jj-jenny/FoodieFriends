@@ -93,7 +93,6 @@ To do:
 ## Testing of FoodieFriends bot:
 Try our bot out @ FoodieFriendsBot on Telegram!
 
-Current cloud hosted version has working commands for split bills and food recommendation by region. 
 
 README GDOC: https://docs.google.com/document/d/1FB3Lspx5IpIAiJI42V_CIAmzAZ1mfNGYC-9NvBehqL0/edit?usp=sharing
 
