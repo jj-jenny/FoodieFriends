@@ -7,7 +7,7 @@ Achievement Level: Gemini
 
 # Milestone 1 (Ideation)
 
-// To include problem motivation, proposed core features / user stories, design and plan
+// Includes problem motivation, proposed core features / user stories, design and plan
 
 ## Motivation 
 
@@ -45,13 +45,28 @@ GooglePay/ DBS PayLah!’s split bill function
 
 # Milestone 2 (Prototype)
 
-// To include core features developed, problems encountered
+// Includes core features developed, problems encountered
 
 ## Updates
 
-1. Hosting of Telegram Bot on Heroku
+1. Hosting of Telegram Bot on Heroku 
+
+    1.1 In order to host our telegram bot on Heroku’s servers, we had to reconstruct quite a lot of our code since we had to convert our code to use webhooks.
+    - We originally used the pyTelegrambotAPI package but it was not very suitable when converting to webhooks so we had to change to using the python-telegram-bot package, resulting in major edits to modules used from the  different Telegram API packages.
+    
+    1.2 As we are only using free hosting servers, we have very limited options with several restrictions.
+    -  Telegram bots hosted on Heroku have an inactivity time limit of 30 minutes. Afterwards, our telegram bot will be asleep and will take time to restart when activated. This results in a slight delay in response from the bot upon the ‘/start’ command from the Telegram user if the bot has not been utilized 
+
 2. Addition of calculate bill function to our split bills command
+
+    2.1 Originally we did not use ‘import decimal’ when doing our calculations and this resulted in our output being very long when there are decimal places.
+    - By using ‘import decimal’, we were able to improve our calculations and limit it to 2d.p (as per usual money calculations).
+
 3. Selection of food locations for the 5 different regions and embedding their Google Maps link
+
+    3.1 During our selection of locations, we realized that Singapore does not have a South region and has Northeast as the fifth region instead.
+    4.
+    5.2 The database of food locations will have many different recommendations and it will be very messy if we display them all every time.
 
 ## Problems Encountered
 
