@@ -75,19 +75,22 @@ GooglePay/ DBS PayLah!’s split bill function
 # Milestone 3 (Extension)
 
 // To include bugs squashed, edge features developed, problems encountered, and user testing
-Milestone 3 updates:
 
-To do:
-- Increase number of food places per region to 50 each -- DONE
-- Sort by cuisine type (Chinese, Indian, Malay, Western) -- DONE
-- Sort by postal code (read first 2 digits then filter from txt file) -- DONE
-- Add new commands -- DONE
-- BotFather /help commands or easy access -- DONE
-- User Testing -- DONE
-- Include price range indication for food places -- DONE
-- Include cuisine indication into region -- DONE
-- Improve code for filtering by cuisine type -- DONE
-- Debug side cases for split bill function (names with spaces, $ for amounts) -- DONE
+## Updates
+
+1) Increased amount of locations per region to 50 each
+Since the bot returns 3 places randomly each time, we wanted to increase the size of the database from 20 to 50 such that it is less likely to return the same places again with each call.
+
+2) Filter by type of cuisine
+We added another function to allow users to choose a specific type of cuisine they would like to choose from. This outputs a list of 3 food places which corresponds to the cuisine they have opted for. We have selected to group the locations into Chinese, Malay, Indian, Western, Thai and Others. Similar to the filter by location function, the output is random and changes when called again.
+
+3) Added the filter by postal code function
+To filter our food locations by a specific postal code, we added a function to our bot such that it displays food locations containing the postal code that match the first 2 digits of the user’s input postal code. We increased the number from the first 3 digits to the first 2 digits to ensure that the output displayed is not too limited.
+
+4) Addition of new command shortcuts for easy access // BotFather /help commands
+In order to make all our functions more accessible, we added new command shortcuts via BotFather for our users to have easier access.
+
+
 
 
 ## Testing of FoodieFriends bot:
