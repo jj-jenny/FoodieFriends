@@ -91,7 +91,21 @@ To filter our food locations by a specific postal code, we added a function to o
 In order to make all our functions more accessible, we added new command shortcuts via BotFather for our users to have easier access.
 
 
+## Testing and Improvements
+We conducted user testing by getting our friends and family to try out the bot functions when they are splitting bills or looking for food recommendations and collated the feedback we received.
 
+### Improvements made based on feedback received:
+
+1) Included price range indication for recommended food places
+Many of our testers mentioned that having the price indication would allow them to make a more informed decision on whether the particular recommendation is suitable for them. 
+    - For example, if they want to save money they can decide on recommendations in the $ range.
+
+2) Included cuisine type as part of the description displayed when filtering by region
+For some food places, it is unclear by their name what type of cuisine they serve, which may confuse some users. Thus, we decided to indicate the cuisine type as part of the description as well. This also led to us modifying our code for the filtering by cuisine function to make use of the description while filtering.
+
+3) Error messages and input format of split bill function
+When our testers tried the split bill function, there were times where the input format was not clear and resulted in the function failing to display the calculated output.
+    - catching InvalidOperation error
 
 ## Testing of FoodieFriends bot:
 Try our bot out @ FoodieFriendsBot on Telegram!
